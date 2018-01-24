@@ -11,8 +11,12 @@ namespace ConsoleApp3
         static void Main(string[] args)
         {
             Random arbitrarynum = new Random();
-            int number = arbitrarynum.Next(1, 100);
-            Console.Write("Im thinking about a number between one and one-hundred (take a guess): ");
+            Console.Write("choose the starting number: ");
+            int x = int.Parse(Console.ReadLine());
+            Console.Write("Choose the ending number: ");
+            int y = int.Parse(Console.ReadLine());
+            int number = arbitrarynum.Next(x, y);
+            Console.Write("Im thinking about a number between " + x + " and " + y + " (take a guess): ");
             int yourguess = int.Parse(Console.ReadLine());
             int i = 0;
             while(yourguess != number)
